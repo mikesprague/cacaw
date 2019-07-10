@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>🐦CaCaw CaCaw</title>
+  <style>
+    body {
+      background-color: lightslategray;
+      padding-top: 6em;
+      text-align: center;
+    }
+
+    .play-button {
+      background-color: lightblue;
+      border: 3px solid royalblue;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 8em;
+      height: 2em;
+      width: 2em;
+    }
+  </style>
+</head>
+<body>
+  <audio class="media-player" volume="100">
+    <source src="./cacaw.mp3" type="audio/mp3">
+  </audio>
+  <input type="button" class="play-button" value="🐦">
+  <script>
+    const playAudio = () => {
+      document.querySelector('.media-player').play();
+    };
+    document.querySelector('.play-button').addEventListener('click', () => {
+      playAudio();
+    });
+    window.addEventListener('load', playAudio);
+  </script>
+</body>
+</html>
